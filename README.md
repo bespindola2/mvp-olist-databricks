@@ -47,7 +47,7 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 | olist_geolocation_dataset.csv | coordenadas por prefixo de CEP | geolocation_zip_code_prefix |
 
 ### Licença
-✏️ Confirmar na página do Kaggle. O dataset é publicado sob **CC BY-NC-SA 4.0**: permite uso, adaptação e compartilhamento para fins **não comerciais**, com atribuição à Olist e compartilhamento sob a mesma licença. O uso acadêmico neste MVP está dentro dessas condições.
+   Conforme informado na página do dataset no Kaggle, ele é publicado sob **CC BY-NC-SA 4.0**: permite uso, adaptação e compartilhamento para fins **não comerciais**, com atribuição à Olist e compartilhamento sob a mesma licença. O uso acadêmico neste MVP está dentro dessas condições.
 
 ---
 
