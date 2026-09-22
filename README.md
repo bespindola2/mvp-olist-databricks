@@ -6,13 +6,13 @@
 ## Estrutura do repositório
 
 ```
-notebooks/
-  00_setup.sql                 -> cria schemas (raw, bronze, silver, gold) e o volume
-  01_bronze_ingestao.py        -> CSV do volume  -> tabelas Delta na bronze
-  02_qualidade_dados.py        -> perfil de qualidade de cada atributo (sobre a bronze)
-  03_silver_transformacao.py   -> limpeza, tipagem, deduplicação, JOIN de categorias
-  04_gold_modelagem.py         -> modelo estrela + catálogo de dados no Unity Catalog
-  05_analises.sql              -> respostas às perguntas de negócio
+(raiz do repositório)
+00_setup.sql                 -> cria schemas (raw, bronze, silver, gold) e o volume
+01_bronze_ingestao.py        -> CSV do volume  -> tabelas Delta na bronze
+02_qualidade_dados.py        -> perfil de qualidade de cada atributo (sobre a bronze)
+03_silver_transformacao.py   -> limpeza, tipagem, deduplicação, JOIN de categorias
+04_gold_modelagem.py         -> modelo estrela + catálogo de dados no Unity Catalog
+05_analises.sql              -> respostas às perguntas de negócio
 docs/img/                      -> screenshots de evidência
 ```
 
@@ -56,7 +56,7 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 1. Download manual dos 9 CSVs no Kaggle.
 2. Criação do volume `workspace.raw.olist` no Unity Catalog (notebook `00_setup.sql`).
 3. Upload dos arquivos pela interface do Catalog Explorer para `/Volumes/workspace/raw/olist/`.
-4. Ingestão para tabelas Delta no schema `bronze` pelo notebook [`01_bronze_ingestao.py`](notebooks/01_bronze_ingestao.py): todas as colunas lidas como texto, sem transformação, com os metadados `_ingestion_ts` e `_source_file`.
+4. Ingestão para tabelas Delta no schema `bronze` pelo notebook [`01_bronze_ingestao.py`](01_bronze_ingestao.py): todas as colunas lidas como texto, sem transformação, com os metadados `_ingestion_ts` e `_source_file`.
 
 ✏️ Screenshots: arquivos no volume e tabelas no schema bronze.
 
@@ -79,7 +79,7 @@ Modelo dimensional em **esquema estrela com duas tabelas fato** que compartilham
 - **fato_itens_pedido**: grão = item de pedido. Responde às perguntas 1, 2 e 3.
 - **fato_pagamentos**: grão = pagamento de um pedido. Responde à pergunta 4. Fica separada porque pagamentos são registrados por pedido, e não por item; juntá-la à outra fato duplicaria valores.
 
-O catálogo foi gravado no **Unity Catalog** como comentários de tabela e de coluna (notebook [`04_gold_modelagem.py`](notebooks/04_gold_modelagem.py)) e pode ser consultado em `workspace.information_schema.columns`. Transcrição:
+O catálogo foi gravado no **Unity Catalog** como comentários de tabela e de coluna (notebook [`04_gold_modelagem.py`](04_gold_modelagem.py)) e pode ser consultado em `workspace.information_schema.columns`. Transcrição:
 
 ### dim_cliente
 Um registro por id_cliente. Linhagem: bronze.customers → silver.customers.
@@ -174,12 +174,12 @@ O pipeline foi ramificado em **um notebook por etapa**, executados em sequência
 
 | Notebook | Entrada | Saída | O que faz |
 |---|---|---|---|
-| [00_setup](notebooks/00_setup.sql) | — | schemas e volume | Prepara a estrutura medalhão |
-| [01_bronze_ingestao](notebooks/01_bronze_ingestao.py) | CSVs no volume | 9 tabelas `bronze.*` | Ingestão fiel + metadados |
-| [02_qualidade_dados](notebooks/02_qualidade_dados.py) | `bronze.*` | `bronze.dq_*` | Diagnóstico de qualidade |
-| [03_silver_transformacao](notebooks/03_silver_transformacao.py) | `bronze.*` | 7 tabelas `silver.*` | Limpeza, tipagem, deduplicação, JOIN de tradução |
-| [04_gold_modelagem](notebooks/04_gold_modelagem.py) | `silver.*` | 6 tabelas `gold.*` | Modelo estrela + catálogo |
-| [05_analises](notebooks/05_analises.sql) | `gold.*` | resultados | Respostas às perguntas |
+| [00_setup](00_setup.sql) | — | schemas e volume | Prepara a estrutura medalhão |
+| [01_bronze_ingestao](01_bronze_ingestao.py) | CSVs no volume | 9 tabelas `bronze.*` | Ingestão fiel + metadados |
+| [02_qualidade_dados](02_qualidade_dados.py) | `bronze.*` | `bronze.dq_*` | Diagnóstico de qualidade |
+| [03_silver_transformacao](03_silver_transformacao.py) | `bronze.*` | 7 tabelas `silver.*` | Limpeza, tipagem, deduplicação, JOIN de tradução |
+| [04_gold_modelagem](04_gold_modelagem.py) | `silver.*` | 6 tabelas `gold.*` | Modelo estrela + catálogo |
+| [05_analises](05_analises.sql) | `gold.*` | resultados | Respostas às perguntas |
 
 Principais transformações documentadas:
 - **JOIN produtos × tradução** pelo campo `product_category_name` para enriquecer cada produto com a categoria em inglês.
