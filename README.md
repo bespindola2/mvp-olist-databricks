@@ -1,7 +1,7 @@
 # MVP – Pipeline de Dados na Nuvem: E-commerce Olist no Databricks
 
 > MVP da disciplina de Engenharia de Dados (MBA PUC-Rio). Pipeline de ponta a ponta no **Databricks Free Edition** seguindo a **Arquitetura Medalhão** (Bronze → Silver → Gold).
-> ✏️ Itens marcados com este símbolo devem ser preenchidos após executar os notebooks.
+> 
 
 ## Estrutura do repositório
 
@@ -196,20 +196,20 @@ Principais transformações documentadas:
 
 Diagnóstico sobre a Bronze, antes de qualquer tratamento, persistido em `bronze.dq_perfil_colunas` (nulos e cardinalidade de cada coluna) e `bronze.dq_verificacoes` (verificações específicas).
 
-✏️ Preencher a coluna "Ocorrências" com o resultado de `bronze.dq_verificacoes`:
+Resultado de `bronze.dq_verificacoes`:
 
 | Dimensão | Verificação | Ocorrências | Tratamento na Silver |
 |---|---|---|---|
-| Unicidade | Pedidos com mais de uma avaliação | ✏️ | Mantida a avaliação mais recente |
-| Completude | Pedido entregue sem data de entrega | ✏️ | Excluído das métricas de prazo |
-| Completude | Produto sem categoria | ✏️ | `sem_categoria` |
-| Consistência | Entrega anterior à compra | ✏️ | Data de entrega anulada |
-| Consistência | CEP com tamanho ≠ 5 | ✏️ | lpad com zeros |
-| Consistência | Categoria sem tradução | ✏️ | Mantém nome em português |
-| Acurácia | Pagamento com 0 parcelas | ✏️ | Ajustado para 1 |
-| Acurácia | Forma de pagamento not_defined | ✏️ | Filtrado nas análises |
-| Acurácia | Peso do produto = 0 | ✏️ | Anulado |
-| Outliers | Preço acima de Q3 + 1,5×IQR | ✏️ | Mantidos (vendas reais) |
+| Unicidade | Pedidos com mais de uma avaliação | 547 | Mantida a avaliação mais recente |
+| Completude | Pedido entregue sem data de entrega | 8 | Excluído das métricas de prazo |
+| Completude | Produto sem categoria | 610 | `sem_categoria` |
+| Consistência | Entrega anterior à compra | 0 | Data de entrega anulada |
+| Consistência | CEP com tamanho ≠ 5 | 0 | lpad com zeros |
+| Consistência | Categoria sem tradução | 2 | Mantém nome em português |
+| Acurácia | Pagamento com 0 parcelas | 2 | Ajustado para 1 |
+| Acurácia | Forma de pagamento not_defined | 3 | Filtrado nas análises |
+| Acurácia | Peso do produto = 0 | 4 | Anulado |
+| Outliers | Preço acima de Q3 + 1,5×IQR | 8427 | Mantidos (vendas reais) |
 
 ✏️ Screenshots das duas tabelas de qualidade.
 
