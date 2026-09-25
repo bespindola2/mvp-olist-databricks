@@ -220,16 +220,44 @@ Resultado de `bronze.dq_verificacoes`:
 ✏️ Para cada pergunta: screenshot do resultado (tabela ou gráfico) e 1 a 2 parágrafos de discussão.
 
 ### Pergunta 1 – Receita por categoria
+
+A receita é relativamente pulverizada: nenhuma categoria passa de 10% do total, mas as 10 maiores somam cerca de 62% dela. Beleza e saúde lidera (R$ 1,26 milhão; 9,3%), seguida de relógios e presentes (R$ 1,20 milhão; 8,9%) e cama, mesa e banho (R$ 1,04 milhão; 7,7%). O volume de pedidos conta uma história diferente da receita: cama, mesa e banho tem o maior número de pedidos (9.399), mas com tíquete médio de cerca de R$ 110, enquanto relógios e presentes chega ao segundo lugar em receita com apenas 5.604 pedidos, a um tíquete de cerca de R$ 214. Na evolução mensal, as cinco maiores categorias cresceram entre 5 e 15 vezes de jan/2017 a ago/2018, um reflexo da expansão da própria plataforma. Beleza e saúde consolidou a liderança no fim do período (R$ 120 mil em ago/2018, contra R$ 12,6 mil em jan/2017), enquanto informática e acessórios, que chegou a liderar em mar/2017, terminou em quinto lugar.
+
 ### Pergunta 2 – Atraso × nota de avaliação
+
+Sim, o atraso é um dos fatores que mais derrubam a satisfação. Pedidos entregues no prazo ou antes têm nota média de 4,29, e só 9,3% deles recebem nota 1 ou 2. Com apenas 1 a 3 dias de atraso, a média já cai um ponto inteiro (3,29) e as notas ruins sobem para 32,1%. A partir de uma semana de atraso, a avaliação praticamente colapsa: média entre 1,67 e 1,72 e cerca de 80% de notas 1 ou 2. A correlação linear de −0,27 parece modesta, mas é atenuada por dois fatores: 93,3% dos pedidos chegam no prazo, e a relação não é linear, pois a nota despenca nos primeiros dias de atraso e estabiliza no patamar mínimo depois disso. O dado mais relevante para o negócio é que os 6,7% de pedidos atrasados concentram boa parte das avaliações negativas.
+
 ### Pergunta 3 – Prazo e frete por estado
+
+Há uma desigualdade logística clara entre as regiões. São Paulo, com 40.494 pedidos (cerca de 42% dos pedidos entregues), tem o menor prazo médio (8,7 dias; mediana de 7) e uma das menores taxas de atraso (4,5%). No outro extremo, estados do Norte como Roraima (29,3 dias), Amapá (27,2) e Amazonas (26,4) esperam mais de três vezes esse prazo, e os nove primeiros do ranking são todos do Norte ou do Nordeste. Prazo longo, porém, não significa necessariamente atraso: Amazonas (2,8%) e Amapá (3,0%) têm taxas de atraso baixas, o que indica que a data prometida já considera a distância.
+
+As maiores taxas de atraso estão em Alagoas (21,4%), Maranhão (17,4%) e Sergipe (15,2%), e chama atenção o Rio de Janeiro (12,1%), o segundo maior mercado, com um índice quase três vezes maior que o de SP e MG. O custo do frete segue o mesmo padrão geográfico: em São Paulo ele equivale a 13,9% do valor dos produtos, o menor índice do país, enquanto no Norte e no Nordeste fica tipicamente entre 20% e 28%, com os maiores pesos em Roraima (28,1%), Maranhão (26,3%) e Amazonas (24,5%). Nas regiões Sul, Sudeste e Centro-Oeste, os estados ficam numa faixa intermediária, entre 16% e 19%. Ou seja, o cliente do Norte e do Nordeste não só espera mais pela entrega, como paga proporcionalmente até o dobro de frete que o paulista.
+
 ### Pergunta 4 – Formas de pagamento e parcelamento
+
+O cartão de crédito domina: responde por 78,3% do valor transacionado e aparece em 76.505 pedidos. O boleto vem a seguir, com 17,9%, e voucher (2,4%) e débito (1,4%) têm participação marginal. O parcelamento cresce de forma consistente com o valor do pedido. Até R$ 50, a média é de 1,7 parcela e 38,8% das compras são parceladas; acima de R$ 500, esses números sobem para 7,1 parcelas e 91,8%. Na faixa de R$ 100 a 200, que concentra o maior número de pedidos com cartão (25.112), três em cada quatro compras já são parceladas. Isso mostra que o parcelamento é um viabilizador importante das compras de maior valor no e-commerce brasileiro.
+
 ### Discussão geral
 
+As quatro análises ajudam a responder ao problema original: o que sustenta a receita e o que determina a satisfação dos clientes. Do lado da receita, o marketplace tem uma base diversificada, sem dependência de uma única categoria, mas com liderança crescente de beleza e saúde e categorias de tíquete alto, como relógios e presentes, contribuindo de forma desproporcional ao seu volume de pedidos. Essa receita é fortemente apoiada no cartão de crédito parcelado, especialmente nas faixas de maior valor. Em outras palavras, o crédito é um componente estrutural da conversão, e não apenas uma opção de pagamento.
+
+Do lado da satisfação, o principal achado é que o cumprimento do prazo prometido pesa mais do que a rapidez da entrega. Estados do Norte recebem em quase 30 dias e ainda assim têm poucos atrasos. Já poucos dias de atraso bastam para derrubar a nota média em um ponto, e uma semana leva a maioria dos clientes a avaliar com nota 1 ou 2. Como a logística é desigual entre regiões, o risco de insatisfação também é: ele se concentra em estados como Alagoas, Maranhão, Sergipe e Rio de Janeiro, onde a taxa de atraso é de duas a cinco vezes a de São Paulo. Soma-se a isso o custo: nessas regiões o frete pesa até o dobro do observado em São Paulo em relação ao valor da compra, o que encarece o acesso ao marketplace justamente onde a experiência de entrega já é mais longa.
+
+Para o negócio, isso aponta para duas alavancas práticas: prometer datas realistas por região, protegendo a avaliação mesmo quando a entrega é longa, e atacar os gargalos específicos dos estados com maior taxa de atraso, com atenção especial ao Rio de Janeiro pelo seu volume. Vale registrar as limitações da análise: as relações encontradas são associações, e não prova de causalidade, e os dados cobrem apenas 2016 a 2018, período de forte expansão da plataforma, o que pode não refletir o comportamento atual.
 ---
 
 ## 7. Autoavaliação
 
-✏️ Pontos a cobrir:
-- Quais perguntas foram respondidas integralmente e quais parcialmente, e por quê.
-- Dificuldades encontradas (ex.: CSV com textos multilinha, avaliações duplicadas por pedido, pagamentos em grão diferente dos itens).
-- Trabalhos futuros: incluir a geolocalização para calcular distância vendedor → cliente; cruzar com dados do IBGE (população e renda por UF); agendar o pipeline com Databricks Jobs; análise de sentimento dos comentários das avaliações.
+O objetivo traçado no início do trabalho foi atingido: as quatro perguntas de negócio foram respondidas integralmente com os dados disponíveis, e o pipeline foi construído de ponta a ponta no Databricks Free Edition, da ingestão dos arquivos brutos à camada Gold modelada em esquema estrela, com o catálogo de dados documentado no Unity Catalog. As respostas conversaram entre si e permitiram uma leitura coerente do problema original, conectando receita, meios de pagamento, logística regional e satisfação do cliente.
+
+A principal dificuldade surgiu na etapa inicial, na definição das perguntas. Formular questões que fossem, ao mesmo tempo, relevantes para o negócio e respondíveis com a base escolhida exigiu mais reflexão do que eu imaginava, e ficou claro na prática por que o documento do MVP insiste em "começar pelo porquê". Outro desafio foi a navegação no Databricks: embora eu tenha contato com a plataforma no meu trabalho, atuo como Data Product Owner, acompanhando a evolução das demandas que os engenheiros de dados executam, e não operando diretamente o ambiente. Localizar recursos como volumes, Git folders, compute e o Catalog Explorer demandou uma curva de adaptação.
+
+Utilizei auxílio de inteligência artificial para a construção dos códigos em PySpark e SQL, e para entender os tratamentos que seriam necessários. Minha experiência prévia era concentrada em Power BI, com conhecimento de DAX e noções básicas de SQL, que vim aprimorando ao longo das aulas e exercícios práticos do curso. A arquitetura medalhão foi um grande facilitador nesse processo: ela estabelece uma linha de raciocínio coerente e estruturada do início ao fim, guiando o passo a passo macro que um pipeline deve seguir (preservar o dado bruto, depois limpar e padronizar, e só então modelar para o consumo). Isso tornou mais fácil entender o papel de cada etapa e de cada transformação. Como resultado, o trabalho também ampliou minha visão sobre o dia a dia dos engenheiros de dados com quem atuo profissionalmente.
+
+Como trabalhos futuros para enriquecer o projeto, identifico:
+
+- conectar a camada Gold ao Power BI para construir um dashboard de acompanhamento, unindo o pipeline à minha experiência atual com visualização;
+- utilizar a tabela de geolocalização, hoje mantida apenas na Bronze, para calcular a distância entre vendedor e cliente e avaliar seu efeito sobre prazo e frete;
+- cruzar os dados com informações do IBGE, como população e renda por UF, para normalizar os indicadores regionais;
+- agendar o pipeline com Databricks Jobs, tornando a execução automática;
+- aplicar análise de sentimento aos comentários das avaliações, para entender o que motiva as notas baixas além do atraso.
