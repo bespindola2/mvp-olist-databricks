@@ -49,6 +49,9 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 ### Licença
    Conforme informado na página do dataset no Kaggle, ele é publicado sob **CC BY-NC-SA 4.0**: permite uso, adaptação e compartilhamento para fins **não comerciais**, com atribuição à Olist e compartilhamento sob a mesma licença. O uso acadêmico neste MVP está dentro dessas condições.
 
+Screenshot: página do Kaggle com a licença
+docs/img/Licenca_kaggle.png
+
 ---
 
 ## 2. Carga dos Dados (Etapa 4.2)
@@ -58,8 +61,10 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 3. Upload dos arquivos pela interface do Catalog Explorer para `/Volumes/workspace/raw/olist/`.
 4. Ingestão para tabelas Delta no schema `bronze` pelo notebook [`01_bronze_ingestao.py`](01_bronze_ingestao.py): todas as colunas lidas como texto, sem transformação, com os metadados `_ingestion_ts` e `_source_file`.
 
-✏️ Screenshots: arquivos no volume e tabelas no schema bronze.
-
+Screenshots: Carga de arquivos, arquivos no volume e tabelas no schema bronze.
+docs/img/Carga_arquivos.png
+docs/img/Arquivos_volume.png
+docs/img/Tabelas_bronze.png
 ---
 
 ## 3. Modelagem e Catálogo de Dados (Etapa 4.3)
@@ -164,8 +169,10 @@ Grão: pagamento de um pedido. Linhagem: silver.order_payments JOIN silver.order
 | qtd_parcelas | int | ≥ 1 |
 | valor_pagamento | decimal(12,2) | Valor em R$, ≥ 0 |
 
-✏️ Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
-
+Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
+docs/img/Schemas_criados.png
+docs/img/Comentarios_colunas.png
+docs/img/linhagem_fato_itens_pedido.png
 ---
 
 ## 4. Pipeline de Dados (Etapa 4.4)
@@ -188,7 +195,14 @@ Principais transformações documentadas:
 - **Cálculos na Gold**: prazo de entrega, dias de atraso, flag de atraso e região a partir da UF.
 - Validações com `assert` na Silver (unicidade de chaves) e na Gold (nenhum item perdido no JOIN).
 
-✏️ Screenshots: `SHOW TABLES` de cada schema e a execução bem-sucedida dos notebooks.
+Screenshots: Tabelas de cada schema e a execução bem-sucedida dos notebooks.
+docs/img/Bronze_show_tables.png
+docs/img/Silver_tables.png
+docs/img/Gold_tables.png
+docs/img/Setup_final_codigo.png
+docs/img/Qualidade_dados_final_codigo.png
+docs/img/Silver_final_codigo.png
+docs/img/Gold_final_codigo.png
 
 ---
 
@@ -211,8 +225,9 @@ Resultado de `bronze.dq_verificacoes`:
 | Acurácia | Peso do produto = 0 | 4 | Anulado |
 | Outliers | Preço acima de Q3 + 1,5×IQR | 8427 | Mantidos (vendas reais) |
 
-✏️ Screenshots das duas tabelas de qualidade.
-
+Screenshots das duas tabelas de qualidade.
+docs/img/Qualidade_tabela1.png
+docs/img/Qualidade_tabela2.png
 ---
 
 ## 6. Análise de Dados (Etapa 4.5)
