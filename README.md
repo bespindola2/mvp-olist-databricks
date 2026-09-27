@@ -257,6 +257,8 @@ Resultado de `bronze.dq_verificacoes`:
 
 ![tabela2_pergunta1](docs/img/tabela2_pergunta1.png)
 
+![tabela2_2_pergunta1](docs/img/tabela2_2_pergunta1.png)
+
 A receita é relativamente pulverizada: nenhuma categoria passa de 10% do total, mas as 10 maiores somam cerca de 62% dela. Beleza e saúde lidera (R$ 1,26 milhão; 9,3%), seguida de relógios e presentes (R$ 1,20 milhão; 8,9%) e cama, mesa e banho (R$ 1,04 milhão; 7,7%). O volume de pedidos conta uma história diferente da receita: cama, mesa e banho tem o maior número de pedidos (9.399), mas com tíquete médio de cerca de R$ 110, enquanto relógios e presentes chega ao segundo lugar em receita com apenas 5.604 pedidos, a um tíquete de cerca de R$ 214. Na evolução mensal, as cinco maiores categorias cresceram entre 5 e 15 vezes de jan/2017 a ago/2018, um reflexo da expansão da própria plataforma. Beleza e saúde consolidou a liderança no fim do período (R$ 120 mil em ago/2018, contra R$ 12,6 mil em jan/2017), enquanto informática e acessórios, que chegou a liderar em mar/2017, terminou em quinto lugar.
 
 ### Pergunta 2 – Atraso × nota de avaliação
