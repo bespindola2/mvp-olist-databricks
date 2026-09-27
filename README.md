@@ -49,7 +49,8 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 ### Licença
    Conforme informado na página do dataset no Kaggle, ele é publicado sob **CC BY-NC-SA 4.0**: permite uso, adaptação e compartilhamento para fins **não comerciais**, com atribuição à Olist e compartilhamento sob a mesma licença. O uso acadêmico neste MVP está dentro dessas condições.
 
-Screenshot: página do Kaggle com a licença
+### Screenshot: página do Kaggle com a licença
+
 docs/img/Licenca_kaggle.png
 
 ---
