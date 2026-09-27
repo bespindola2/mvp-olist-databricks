@@ -252,6 +252,7 @@ Resultado de `bronze.dq_verificacoes`:
 ## 6. Análise de Dados (Etapa 4.5)
 
 ### Pergunta 1 – Receita por categoria
+Quais categorias de produto geram mais receita, e como essa receita evoluiu mês a mês?
 
 ![tabela1_pergunta1](docs/img/tabela1_pergunta1.png)
 
@@ -262,6 +263,7 @@ Resultado de `bronze.dq_verificacoes`:
 A receita é relativamente pulverizada: nenhuma categoria passa de 10% do total, mas as 10 maiores somam cerca de 62% dela. Beleza e saúde lidera (R$ 1,26 milhão; 9,3%), seguida de relógios e presentes (R$ 1,20 milhão; 8,9%) e cama, mesa e banho (R$ 1,04 milhão; 7,7%). O volume de pedidos conta uma história diferente da receita: cama, mesa e banho tem o maior número de pedidos (9.399), mas com tíquete médio de cerca de R$ 110, enquanto relógios e presentes chega ao segundo lugar em receita com apenas 5.604 pedidos, a um tíquete de cerca de R$ 214. Na evolução mensal, as cinco maiores categorias cresceram entre 5 e 15 vezes de jan/2017 a ago/2018, um reflexo da expansão da própria plataforma. Beleza e saúde consolidou a liderança no fim do período (R$ 120 mil em ago/2018, contra R$ 12,6 mil em jan/2017), enquanto informática e acessórios, que chegou a liderar em mar/2017, terminou em quinto lugar.
 
 ### Pergunta 2 – Atraso × nota de avaliação
+Atrasos na entrega reduzem a nota de avaliação do cliente?
 
 ![tabela1_pergunta2](docs/img/tabela1_pergunta2.png)
 
@@ -270,6 +272,7 @@ A receita é relativamente pulverizada: nenhuma categoria passa de 10% do total,
 Sim, o atraso é um dos fatores que mais derrubam a satisfação. Pedidos entregues no prazo ou antes têm nota média de 4,29, e só 9,3% deles recebem nota 1 ou 2. Com apenas 1 a 3 dias de atraso, a média já cai um ponto inteiro (3,29) e as notas ruins sobem para 32,1%. A partir de uma semana de atraso, a avaliação praticamente colapsa: média entre 1,67 e 1,72 e cerca de 80% de notas 1 ou 2. A correlação linear de −0,27 parece modesta, mas é atenuada por dois fatores: 93,3% dos pedidos chegam no prazo, e a relação não é linear, pois a nota despenca nos primeiros dias de atraso e estabiliza no patamar mínimo depois disso. O dado mais relevante para o negócio é que os 6,7% de pedidos atrasados concentram boa parte das avaliações negativas.
 
 ### Pergunta 3 – Prazo e frete por estado
+Quais estados têm maior prazo médio de entrega e maior peso do frete sobre o valor do pedido?
 
 ![tabela_pergunta3](docs/img/tabela_pergunta3.png)
 
@@ -278,6 +281,7 @@ Há uma desigualdade logística clara entre as regiões. São Paulo, com 40.494 
 As maiores taxas de atraso estão em Alagoas (21,4%), Maranhão (17,4%) e Sergipe (15,2%), e chama atenção o Rio de Janeiro (12,1%), o segundo maior mercado, com um índice quase três vezes maior que o de SP e MG. O custo do frete segue o mesmo padrão geográfico: em São Paulo ele equivale a 13,9% do valor dos produtos, o menor índice do país, enquanto no Norte e no Nordeste fica tipicamente entre 20% e 28%, com os maiores pesos em Roraima (28,1%), Maranhão (26,3%) e Amazonas (24,5%). Nas regiões Sul, Sudeste e Centro-Oeste, os estados ficam numa faixa intermediária, entre 16% e 19%. Ou seja, o cliente do Norte e do Nordeste não só espera mais pela entrega, como paga proporcionalmente até o dobro de frete que o paulista.
 
 ### Pergunta 4 – Formas de pagamento e parcelamento
+Como se distribuem as formas de pagamento e o número de parcelas por faixa de valor do pedido?
 
 ![tabela1_pergunta4](docs/img/tabela1_pergunta4.png)
 
