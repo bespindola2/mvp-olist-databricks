@@ -51,7 +51,7 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 
 ### Screenshot: página do Kaggle com a licença
 
-docs/img/Licenca_kaggle.png
+![Licença do dataset no Kaggle](docs/img/Licenca_kaggle.png)
 
 ---
 
