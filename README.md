@@ -269,7 +269,7 @@ Sim, o atraso é um dos fatores que mais derrubam a satisfação. Pedidos entreg
 
 ### Pergunta 3 – Prazo e frete por estado
 
-![tabela_pergunta3](docs/img/tabela1_pergunta3.png)
+![tabela_pergunta3](docs/img/tabela_pergunta3.png)
 
 Há uma desigualdade logística clara entre as regiões. São Paulo, com 40.494 pedidos (cerca de 42% dos pedidos entregues), tem o menor prazo médio (8,7 dias; mediana de 7) e uma das menores taxas de atraso (4,5%). No outro extremo, estados do Norte como Roraima (29,3 dias), Amapá (27,2) e Amazonas (26,4) esperam mais de três vezes esse prazo, e os nove primeiros do ranking são todos do Norte ou do Nordeste. Prazo longo, porém, não significa necessariamente atraso: Amazonas (2,8%) e Amapá (3,0%) têm taxas de atraso baixas, o que indica que a data prometida já considera a distância.
 
@@ -290,6 +290,7 @@ As quatro análises ajudam a responder ao problema original: o que sustenta a re
 Do lado da satisfação, o principal achado é que o cumprimento do prazo prometido pesa mais do que a rapidez da entrega. Estados do Norte recebem em quase 30 dias e ainda assim têm poucos atrasos. Já poucos dias de atraso bastam para derrubar a nota média em um ponto, e uma semana leva a maioria dos clientes a avaliar com nota 1 ou 2. Como a logística é desigual entre regiões, o risco de insatisfação também é: ele se concentra em estados como Alagoas, Maranhão, Sergipe e Rio de Janeiro, onde a taxa de atraso é de duas a cinco vezes a de São Paulo. Soma-se a isso o custo: nessas regiões o frete pesa até o dobro do observado em São Paulo em relação ao valor da compra, o que encarece o acesso ao marketplace justamente onde a experiência de entrega já é mais longa.
 
 Para o negócio, isso aponta para duas alavancas práticas: prometer datas realistas por região, protegendo a avaliação mesmo quando a entrega é longa, e atacar os gargalos específicos dos estados com maior taxa de atraso, com atenção especial ao Rio de Janeiro pelo seu volume. Vale registrar as limitações da análise: as relações encontradas são associações, e não prova de causalidade, e os dados cobrem apenas 2016 a 2018, período de forte expansão da plataforma, o que pode não refletir o comportamento atual.
+
 ---
 
 ## 7. Autoavaliação
