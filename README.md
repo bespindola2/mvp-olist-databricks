@@ -66,9 +66,9 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 
 ![carga de arquivos](docs/img/Carga_arquivos.png)
 
-![arquivos carregados](docs/img/Arquivos_volume.png)
+![arquivos carregados](docs/img/Arquivos_Volume.png)
 
-![schema bronza](docs/img/Tabelas_bronze.png)
+![schema bronze](docs/img/Tabelas_bronze.png)
 
 ---
 
@@ -180,7 +180,7 @@ Grão: pagamento de um pedido. Linhagem: silver.order_payments JOIN silver.order
 
 ![tabela comentada](docs/img/Comentarios_colunas.png)
 
-![modelagem](docs/img/linhagem_fato_itens_pedido.png)
+![modelagem](docs/img/Linhagem_fato_itens_pedido.png)
 
 ---
 
@@ -251,23 +251,35 @@ Resultado de `bronze.dq_verificacoes`:
 
 ## 6. Análise de Dados (Etapa 4.5)
 
-✏️ Para cada pergunta: screenshot do resultado (tabela ou gráfico) e 1 a 2 parágrafos de discussão.
-
 ### Pergunta 1 – Receita por categoria
+
+![tabela1_pergunta1](docs/img/tabela1_pergunta1.png)
+
+![tabela2_pergunta1](docs/img/tabela2_pergunta1.png)
 
 A receita é relativamente pulverizada: nenhuma categoria passa de 10% do total, mas as 10 maiores somam cerca de 62% dela. Beleza e saúde lidera (R$ 1,26 milhão; 9,3%), seguida de relógios e presentes (R$ 1,20 milhão; 8,9%) e cama, mesa e banho (R$ 1,04 milhão; 7,7%). O volume de pedidos conta uma história diferente da receita: cama, mesa e banho tem o maior número de pedidos (9.399), mas com tíquete médio de cerca de R$ 110, enquanto relógios e presentes chega ao segundo lugar em receita com apenas 5.604 pedidos, a um tíquete de cerca de R$ 214. Na evolução mensal, as cinco maiores categorias cresceram entre 5 e 15 vezes de jan/2017 a ago/2018, um reflexo da expansão da própria plataforma. Beleza e saúde consolidou a liderança no fim do período (R$ 120 mil em ago/2018, contra R$ 12,6 mil em jan/2017), enquanto informática e acessórios, que chegou a liderar em mar/2017, terminou em quinto lugar.
 
 ### Pergunta 2 – Atraso × nota de avaliação
 
+![tabela1_pergunta2](docs/img/tabela1_pergunta2.png)
+
+![tabela2_pergunta2](docs/img/tabela2_pergunta2.png)
+
 Sim, o atraso é um dos fatores que mais derrubam a satisfação. Pedidos entregues no prazo ou antes têm nota média de 4,29, e só 9,3% deles recebem nota 1 ou 2. Com apenas 1 a 3 dias de atraso, a média já cai um ponto inteiro (3,29) e as notas ruins sobem para 32,1%. A partir de uma semana de atraso, a avaliação praticamente colapsa: média entre 1,67 e 1,72 e cerca de 80% de notas 1 ou 2. A correlação linear de −0,27 parece modesta, mas é atenuada por dois fatores: 93,3% dos pedidos chegam no prazo, e a relação não é linear, pois a nota despenca nos primeiros dias de atraso e estabiliza no patamar mínimo depois disso. O dado mais relevante para o negócio é que os 6,7% de pedidos atrasados concentram boa parte das avaliações negativas.
 
 ### Pergunta 3 – Prazo e frete por estado
+
+![tabela_pergunta3](docs/img/tabela1_pergunta3.png)
 
 Há uma desigualdade logística clara entre as regiões. São Paulo, com 40.494 pedidos (cerca de 42% dos pedidos entregues), tem o menor prazo médio (8,7 dias; mediana de 7) e uma das menores taxas de atraso (4,5%). No outro extremo, estados do Norte como Roraima (29,3 dias), Amapá (27,2) e Amazonas (26,4) esperam mais de três vezes esse prazo, e os nove primeiros do ranking são todos do Norte ou do Nordeste. Prazo longo, porém, não significa necessariamente atraso: Amazonas (2,8%) e Amapá (3,0%) têm taxas de atraso baixas, o que indica que a data prometida já considera a distância.
 
 As maiores taxas de atraso estão em Alagoas (21,4%), Maranhão (17,4%) e Sergipe (15,2%), e chama atenção o Rio de Janeiro (12,1%), o segundo maior mercado, com um índice quase três vezes maior que o de SP e MG. O custo do frete segue o mesmo padrão geográfico: em São Paulo ele equivale a 13,9% do valor dos produtos, o menor índice do país, enquanto no Norte e no Nordeste fica tipicamente entre 20% e 28%, com os maiores pesos em Roraima (28,1%), Maranhão (26,3%) e Amazonas (24,5%). Nas regiões Sul, Sudeste e Centro-Oeste, os estados ficam numa faixa intermediária, entre 16% e 19%. Ou seja, o cliente do Norte e do Nordeste não só espera mais pela entrega, como paga proporcionalmente até o dobro de frete que o paulista.
 
 ### Pergunta 4 – Formas de pagamento e parcelamento
+
+![tabela1_pergunta4](docs/img/tabela1_pergunta4.png)
+
+![tabela2_pergunta4](docs/img/tabela2_pergunta4.png)
 
 O cartão de crédito domina: responde por 78,3% do valor transacionado e aparece em 76.505 pedidos. O boleto vem a seguir, com 17,9%, e voucher (2,4%) e débito (1,4%) têm participação marginal. O parcelamento cresce de forma consistente com o valor do pedido. Até R$ 50, a média é de 1,7 parcela e 38,8% das compras são parceladas; acima de R$ 500, esses números sobem para 7,1 parcelas e 91,8%. Na faixa de R$ 100 a 200, que concentra o maior número de pedidos com cartão (25.112), três em cada quatro compras já são parceladas. Isso mostra que o parcelamento é um viabilizador importante das compras de maior valor no e-commerce brasileiro.
 
