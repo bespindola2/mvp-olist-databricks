@@ -170,10 +170,11 @@ Grão: pagamento de um pedido. Linhagem: silver.order_payments JOIN silver.order
 | qtd_parcelas | int | ≥ 1 |
 | valor_pagamento | decimal(12,2) | Valor em R$, ≥ 0 |
 
-Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
-docs/img/Schemas_criados.png
-docs/img/Comentarios_colunas.png
-docs/img/linhagem_fato_itens_pedido.png
+### Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
+
+![Catalogo com schemas] (docs/img/Schemas_criados.png)
+![tabela comentada] (docs/img/Comentarios_colunas.png)
+![modelagem] (docs/img/linhagem_fato_itens_pedido.png)
 ---
 
 ## 4. Pipeline de Dados (Etapa 4.4)
