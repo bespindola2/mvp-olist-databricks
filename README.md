@@ -65,8 +65,11 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 ## Screenshots: Carga de arquivos, arquivos no volume e tabelas no schema bronze.
 
 ![carga de arquivos](docs/img/Carga_arquivos.png)
+
 ![arquivos carregados](docs/img/Arquivos_volume.png)
+
 ![schema bronza](docs/img/Tabelas_bronze.png)
+
 ---
 
 ## 3. Modelagem e Catálogo de Dados (Etapa 4.3)
@@ -174,8 +177,11 @@ Grão: pagamento de um pedido. Linhagem: silver.order_payments JOIN silver.order
 ### Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
 
 ![Catalogo com schemas](docs/img/Schemas_criados.png)
+
 ![tabela comentada](docs/img/Comentarios_colunas.png)
+
 ![modelagem](docs/img/linhagem_fato_itens_pedido.png)
+
 ---
 
 ## 4. Pipeline de Dados (Etapa 4.4)
@@ -198,14 +204,21 @@ Principais transformações documentadas:
 - **Cálculos na Gold**: prazo de entrega, dias de atraso, flag de atraso e região a partir da UF.
 - Validações com `assert` na Silver (unicidade de chaves) e na Gold (nenhum item perdido no JOIN).
 
-Screenshots: Tabelas de cada schema e a execução bem-sucedida dos notebooks.
-docs/img/Bronze_show_tables.png
-docs/img/Silver_tables.png
-docs/img/Gold_tables.png
-docs/img/Setup_final_codigo.png
-docs/img/Qualidade_dados_final_codigo.png
-docs/img/Silver_final_codigo.png
-docs/img/Gold_final_codigo.png
+## Screenshots: Tabelas de cada schema e a execução bem-sucedida dos notebooks.
+
+![tabelas bronze e bronze rodada](docs/img/Bronze_show_tables.png)
+
+![tabelas silver](docs/img/Silver_tables.png)
+
+![tabelas gold](docs/img/Gold_tables.png)
+
+![setup rodado](docs/img/Setup_final_codigo.png)
+
+![qualidade de dados rodado](docs/img/Qualidade_dados_final_codigo.png)
+
+![silver rodada](docs/img/Silver_final_codigo.png)
+
+![gold rodada](docs/img/Gold_final_codigo.png)
 
 ---
 
@@ -228,9 +241,12 @@ Resultado de `bronze.dq_verificacoes`:
 | Acurácia | Peso do produto = 0 | 4 | Anulado |
 | Outliers | Preço acima de Q3 + 1,5×IQR | 8427 | Mantidos (vendas reais) |
 
-Screenshots das duas tabelas de qualidade.
-docs/img/Qualidade_tabela1.png
-docs/img/Qualidade_tabela2.png
+## Screenshots das duas tabelas de qualidade.
+
+![bronze.dq_perfil_colunas](docs/img/Qualidade_tabela1.png)
+
+![bronze.dq_verificacoes](docs/img/Qualidade_tabela2.png)
+
 ---
 
 ## 6. Análise de Dados (Etapa 4.5)
