@@ -62,10 +62,11 @@ Dados reais e anonimizados de cerca de 100 mil pedidos feitos entre 2016 e 2018 
 3. Upload dos arquivos pela interface do Catalog Explorer para `/Volumes/workspace/raw/olist/`.
 4. Ingestão para tabelas Delta no schema `bronze` pelo notebook [`01_bronze_ingestao.py`](01_bronze_ingestao.py): todas as colunas lidas como texto, sem transformação, com os metadados `_ingestion_ts` e `_source_file`.
 
-Screenshots: Carga de arquivos, arquivos no volume e tabelas no schema bronze.
-docs/img/Carga_arquivos.png
-docs/img/Arquivos_volume.png
-docs/img/Tabelas_bronze.png
+## Screenshots: Carga de arquivos, arquivos no volume e tabelas no schema bronze.
+
+![carga de arquivos](docs/img/Carga_arquivos.png)
+![arquivos carregados](docs/img/Arquivos_volume.png)
+![schema bronza](docs/img/Tabelas_bronze.png)
 ---
 
 ## 3. Modelagem e Catálogo de Dados (Etapa 4.3)
@@ -172,9 +173,9 @@ Grão: pagamento de um pedido. Linhagem: silver.order_payments JOIN silver.order
 
 ### Screenshots: Catalog Explorer com os schemas, uma tabela com os comentários das colunas e a aba Lineage de `fato_itens_pedido`.
 
-![Catalogo com schemas] (docs/img/Schemas_criados.png)
-![tabela comentada] (docs/img/Comentarios_colunas.png)
-![modelagem] (docs/img/linhagem_fato_itens_pedido.png)
+![Catalogo com schemas](docs/img/Schemas_criados.png)
+![tabela comentada](docs/img/Comentarios_colunas.png)
+![modelagem](docs/img/linhagem_fato_itens_pedido.png)
 ---
 
 ## 4. Pipeline de Dados (Etapa 4.4)
